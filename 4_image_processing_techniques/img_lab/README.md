@@ -7,26 +7,25 @@ labelme
 ```
 
 ### types of image dataset
+
 classification dataset
 object detection dataset
 segmentation dataset
- -  instance segmentation
- -  semantic segmentation
 
-
-
+- instance segmentation
+- semantic segmentation
 
 ### install labelme
+
 ```bash
 pip install labelme
 ```
 
-
-
-
 ##### Convert to VOC-format Dataset
+
 - Masks are indexed PNGs (e.g., class "cat" → ID 1).
 - Optional: .npy versions, visualization images, instance masks.
+
 ```bash
 
 python labelme2voc.py data_annotated data_dataset_voc --labels data_annotated/labels.txt
@@ -42,11 +41,13 @@ output_dir/
 
 
 ```
+
 ### Convert to COCO-format Dataset
+
 - Single .json contains:
-    - images
-    - annotations
-    - categories
+  - images
+  - annotations
+  - categories
 - Each object has bbox, segmentation, category_id, and id.
 
 ```bash
@@ -60,10 +61,6 @@ output_dir/
 │   └── instances_train2017.json
 
 ```
-
-
-
-
 
 |               | VOC-style from LabelMe    | COCO-style from LabelMe          |
 | ------------- | ------------------------- | -------------------------------- |
